@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "module": "commonjs",
+  
+      "baseUrl": "./packages",
+      "paths": {
+        "@koushiro/demo1": ["demo1/src"],
+        "@koushiro/demo1/*": ["demo1/src/*"],
+        "@koushiro/demo2": ["demo2/src"],
+        "@koushiro/demo2/*": ["entity/src/*"]
+      }
+    }
+  }
+  

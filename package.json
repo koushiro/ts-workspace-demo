@@ -1,0 +1,12 @@
+{
+  "name": "ts-workspace-demo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "demo": "yarn workspace @koushiro/demo2 start"
+  }
+}
