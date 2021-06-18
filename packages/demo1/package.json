@@ -1,5 +1,10 @@
 {
   "name": "@koushiro/demo1",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "fmt": "prettier ./src --write",
+    "lint": "eslint ./src --fix",
+    "test": "yarn jest"
+  }
 }

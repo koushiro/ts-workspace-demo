@@ -7,6 +7,36 @@
     "packages/*"
   ],
   "scripts": {
+    "fmt": "prettier ./packages --write",
+    "lint": "eslint ./packages/**/*.ts --fix",
+    "test": "yarn jest ./packages",
     "demo": "yarn workspace @koushiro/demo2 start"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.2",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "eslint": "^7.28.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.4",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.3.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier ./packages --write",
+      "eslint ./packages/**/*.ts --fix",
+      "git add ."
+    ]
   }
 }
