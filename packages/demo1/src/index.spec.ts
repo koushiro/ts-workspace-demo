@@ -1,8 +1,13 @@
+import { ApiPromise, WsProvider } from '@polkadot/api';
+
 import { sum } from './index';
 
 describe('Demo', (): void => {
   beforeAll(async () => {
-    console.log('before');
+    const wsProvider = new WsProvider('wss://rpc.polkadot.io');
+    //    const api = await ApiPromise.create({ provider: wsProvider });
+    //    const runtimeVersion = await api.rpc.state.getRuntimeVersion('3500000');
+    //    console.log(runtimeVersion.toString());
   });
 
   it('Sum', (): void => {
