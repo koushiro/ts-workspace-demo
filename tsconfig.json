@@ -1,15 +1,22 @@
 {
-    "compilerOptions": {
-      "target": "es2021",
-      "module": "commonjs",
-  
-      "baseUrl": "./packages",
-      "paths": {
-        "@koushiro/demo1": ["demo1/src"],
-        "@koushiro/demo1/*": ["demo1/src/*"],
-        "@koushiro/demo2": ["demo2/src"],
-        "@koushiro/demo2/*": ["entity/src/*"]
-      }
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "strict": true,
+    "allowJs": true,
+
+    "outDir": "./build",
+    "baseUrl": "./packages",
+    "paths": {
+      "@koushiro/demo1": ["demo1/src"],
+      "@koushiro/demo1/*": ["demo1/src/*"],
+      "@koushiro/demo2": ["demo2/src"],
+      "@koushiro/demo2/*": ["entity/src/*"]
     }
-  }
-  
+  },
+  "exclude": [
+    "./build/**/*",
+    "./node_modules"
+  ]
+}

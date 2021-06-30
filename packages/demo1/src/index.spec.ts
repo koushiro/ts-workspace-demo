@@ -2,7 +2,7 @@ import { sum } from './index';
 
 describe('Demo', (): void => {
   beforeAll(async () => {
-    console.log('before');
+    console.log('Hello');
   });
 
   it('Sum', (): void => {
