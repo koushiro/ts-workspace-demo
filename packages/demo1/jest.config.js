@@ -4,7 +4,7 @@ module.exports = {
   testEnvironment: 'node',
   transform: {
     '^.+\\.(t|j)sx?$': 'ts-jest'
-  },
+  }
   // transformIgnorePatterns: [
   //   '/node_modules/(?!(@polkadot|@babel/runtime/helpers/esm/))'
   // ]
