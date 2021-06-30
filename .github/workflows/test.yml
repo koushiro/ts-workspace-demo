@@ -1,0 +1,25 @@
+name: build
+
+on:
+  push: 
+    branches: [master]
+  pull_request:
+
+jobs:
+  build:
+    name: Build
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+        step: [fmt-check, lint, test]
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - name: Checkout Sources
+        uses: actions/checkout@v2
+
+      - name: Run Command ${{ matrix.step }}
+        run: |
+          yarn install
+          yarn ${{ matrix.step }}

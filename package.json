@@ -7,6 +7,7 @@
     "packages/*"
   ],
   "scripts": {
+    "fmt-check": "prettier ./packages --check",
     "fmt": "prettier ./packages --write",
     "lint": "eslint ./packages/**/*.ts --fix",
     "test": "yarn jest ./packages",
