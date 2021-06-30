@@ -1,10 +1,8 @@
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-  transform: {
-    '^.+\\.(t|j)sx?$': 'ts-jest'
-  },
-  transformIgnorePatterns: [
-    '/node_modules/(?!(@polkadot|@babel/runtime/helpers/esm/))'
-  ]
+export const preset = 'ts-jest';
+export const testEnvironment = 'node';
+export const transform = {
+  '^.+\\.(t|j)sx?$': 'ts-jest'
 };
+export const transformIgnorePatterns = [
+  '/node_modules/(?!(@polkadot|@babel/runtime/helpers/esm/))'
+];
