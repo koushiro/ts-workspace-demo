@@ -1,15 +1,16 @@
 {
-    "compilerOptions": {
-      "target": "es2021",
-      "module": "commonjs",
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "strict": true,
+    "allowJs": true,
   
-      "baseUrl": "./packages",
-      "paths": {
-        "@koushiro/demo1": ["demo1/src"],
-        "@koushiro/demo1/*": ["demo1/src/*"],
-        "@koushiro/demo2": ["demo2/src"],
-        "@koushiro/demo2/*": ["entity/src/*"]
-      }
+    "baseUrl": "./packages",
+    "paths": {
+      "@koushiro/demo1": ["demo1/src"],
+      "@koushiro/demo1/*": ["demo1/src/*"],
+      "@koushiro/demo2": ["demo2/src"],
+      "@koushiro/demo2/*": ["entity/src/*"]
     }
   }
-  
+}
